@@ -1,0 +1,31 @@
+import React from "react";
+import { QRCodeCanvas } from "qrcode.react";
+function Qrgenerator({ data, label }) {
+  const excludinglastrow = data.slice(0, data.length - 1);
+  return (
+    <div >
+      {excludinglastrow.length > 0 ? (
+        excludinglastrow.map(
+          (row, index) => (
+            console.log(label.height,label.width),
+            (
+              <div className= {`h-[${label.height*3.7795275591}px] w-[${label.width*3.7795275591}px] border border-2` }
+                key={index}
+                
+                
+              > <div className="h-16 w-16"></div>
+                
+                <p>Gunz Sku: {row.gunzsku}</p>
+                <p>Product Name: {row.productname}</p>
+              </div>
+            )
+          )
+        )
+      ) : (
+        <p>No Data Available</p>
+      )}
+    </div>
+  );
+}
+
+export default Qrgenerator;
