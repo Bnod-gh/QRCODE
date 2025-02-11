@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import CSVUploader from "./assets/component/CSVUploader";
 import Qrgenerator from "./assets/component/Qrgenerator";
-import Footer from "./assets/component/Footer";
+
 
 function App() {
   const [data, setData] = useState([]);
