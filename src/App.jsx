@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import CSVUploader from "./assets/component/CSVUploader";
 import Qrgenerator from "./assets/component/Qrgenerator";
+import MyDocument from "./assets/component/MyDocument";
 
 
 function App() {
@@ -20,7 +21,6 @@ function App() {
   return (
     <div>
       <CSVUploader onFileUpload={handleFileUpload} />
-
       <Qrgenerator data={data} label={label} />
      
 
