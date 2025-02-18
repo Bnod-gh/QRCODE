@@ -33,7 +33,7 @@ function Qrgenerator({ data }) {
 
   return (
     <div className="flex flex-col items-center justify-center bg-amber-100 w-auto h-full">
-      <div className="flex flex-col mt-2 ml-2 flex-wrap w-[210mm] h-[297mm] bg-white">
+      <div className="flex flex-col mt-2 ml-2 flex-wrap w-[210mm] h-[297mm] bg-white pt-[10mm]">
         {currentPageData.length > 0 ? (
           currentPageData.map((row, index) => (
             <div key={index} className="w-[70mm] h-[25mm] flex border-[1px] border-dashed items-center">
