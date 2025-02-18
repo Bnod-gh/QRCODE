@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Document, Page, Text, View, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, View, Image, Font } from '@react-pdf/renderer';
 import QRCode from 'qrcode';
 
 const MyDocument = ({ data }) => {
@@ -65,17 +65,17 @@ const MyDocument = ({ data }) => {
       <Page size="A4">
         <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fbbf24', width: '100%', height: '100%' }}>
           <View style={{ flexDirection: 'column', flexWrap: 'wrap', width: '210mm', height: '297mm', backgroundColor: '#ffffff', padding: 1 }}>
-          <View style={{paddingTop:'10mm', flexWrap: 'wrap',}}>
-            {data.map((item, index) => (
-              <View key={index} style={{ width: '70mm', height: '25mm', flexDirection: 'row', borderWidth: 1, borderStyle: '', alignItems: 'center', }}>
-                {/* Embed the base64 image for QR code */}
-                <View style={{width:"40%"}}><Image src={qrCodes[index]} style={{ width: '100%', height: '100%' }} /></View>
-                <View style={{width:"60%"}}> {/* Displaying gunzsku and product name */}
-                  <Text style={{ fontSize: 10, fontWeight: 'bold', textDecoration: 'underline' }}>{item.gunzsku}</Text>
-                  <Text style={{ fontSize: 10, flexWrap: 'wrap', }}>{item.productname.slice(0,60)}</Text></View>
-              </View>
-              
-            ))}
+            <View style={{ paddingTop: '10mm', flexWrap: 'wrap', }}>
+              {data.map((item, index) => (
+                <View key={index} style={{ marginLeft: '1mm', marginRight: '1mm', width: '64mm', height: '24.3mm', flexDirection: 'row', borderWidth: 1, borderStyle: '', alignItems: 'center', }}>
+                  {/* Embed the base64 image for QR code */}
+                  <View style={{ width: "40%" }}><Image src={qrCodes[index]} style={{ width: '100%', height: '100%' }} /></View>
+                  <View style={{ width: "60%" }}> {/* Displaying gunzsku and product name */}
+                    <Text style={{family:'Helvetica', fontSize: 10, fontWeight: 'heavy', textDecoration: 'underline' }}>{item.gunzsku}</Text>
+                    <Text style={{ fontSize: 10, flexWrap: 'wrap', }}>{item.productname.slice(0, 65)}</Text></View>
+                </View>
+
+              ))}
             </View>
           </View>
         </View>
