@@ -9,7 +9,7 @@ const MyDocument = ({ data }) => {
 
   // Check if data is valid and not empty
   useEffect(() => {
-    console.log('Data in MyDocument useEffect:', data); // Debugging the data
+    // console.log('Data in MyDocument useEffect:', data); // Debugging the data
 
     // If there's data to process, generate the QR codes
     if (data && data.length > 0) {
