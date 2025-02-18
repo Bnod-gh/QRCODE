@@ -65,9 +65,9 @@ const MyDocument = ({ data }) => {
       <Page size="A4">
         <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fbbf24', width: '100%', height: '100%' }}>
           <View style={{ flexDirection: 'column', flexWrap: 'wrap', width: '210mm', height: '297mm', backgroundColor: '#ffffff', }}>
-            <View style={{ paddingTop: '10mm', flexWrap: 'wrap', }}>
+            <View style={{ paddingTop: '10mm', flexWrap: 'wrap', paddingLeft:'2mm'}}>
               {data.map((item, index) => (
-                <View key={index} style={{ marginLeft: '1mm', marginRight: '1mm', width: '64mm', height: '24.3mm', flexDirection: 'row', borderWidth: 1,borderRadius: 5, borderStyle: '', alignItems: 'center', }}>
+                <View key={index} style={{ marginLeft: '1mm', marginRight: '1mm', width: '64mm', height: '24.3mm', flexDirection: 'row', borderWidth: 1,borderRadius: 5, alignItems: 'center', }}>
                   {/* Embed the base64 image for QR code */}
                   <View style={{ width: "40%" }}><Image src={qrCodes[index]} style={{ width: '100%', height: '100%' }} /></View>
                   <View style={{ width: "60%" }}> {/* Displaying gunzsku and product name */}
