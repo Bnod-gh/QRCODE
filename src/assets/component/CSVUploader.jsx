@@ -29,7 +29,7 @@ function CSVUploader({onFileUpload}) {
 
   
   return (
-    <div className="min-h-20 text-center  bg-amber-200 flex gap-2 justify-center items-center">
+    <div className="min-h-20 text-center  bg-neutral-400 flex gap-2 justify-center items-center">
       <div className="w-4/5"><label htmlFor="myfile">Select a file: </label>
       <input
         type="file"
